@@ -12,24 +12,21 @@
       <button className="py-2 px-4 border" @click="addTask">+</button>
     </div>
   </form>
+  <TodoList :tasks="tasks" />
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      newTask: "",
-      tasks: [],
-    };
-  },
-  methods: {
-    addTask() {
-      if (this.newTask.trim() !== "") {
-        this.tasks.push(this.newTask); // Add the task to the tasks array
-        this.newTask = ""; // Reset the input field
-      }
-    },
-  },
+<script setup>
+import TodoList from "./TodoList.vue";
+import { ref } from 'vue';
+
+const newTask = ref('');
+const tasks = ref([]);
+
+const addTask = () => {
+  if (newTask.value.trim() !== '') {
+    tasks.value.push(newTask.value);
+    newTask.value = '';
+  }
 };
 </script>
 
