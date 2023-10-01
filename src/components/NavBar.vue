@@ -3,6 +3,3 @@
     <h1 className="text-base font-medium text-white">TaskTracker</h1>
   </div>
 </template>
-
-<style scoped>
-</style>
