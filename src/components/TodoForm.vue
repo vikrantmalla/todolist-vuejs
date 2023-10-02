@@ -20,7 +20,7 @@ import TodoList from "./TodoList.vue";
 import { ref } from 'vue';
 
 const newTask = ref('');
-const tasks = ref([]);
+let tasks = ref([]);
 
 const addTask = () => {
   if (newTask.value.trim() !== '') {
