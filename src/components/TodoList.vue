@@ -3,12 +3,11 @@ import { ref, defineProps } from "vue";
 const { tasks } = defineProps({
   tasks: Array,
 });
-console.log("beforeUpdate", tasks);
 const handleTaskRemoval = (taskId) => {
-  const updatedTasks = tasks.filter((task) => task.id !== taskId);
-  tasks = updatedTasks;
-  console.log(updatedTasks);
-  console.log("afterUpdate", tasks);
+  // const updatedTasks = tasks.filter((task) => task.id !== taskId);
+  // tasks = updatedTasks;
+  // console.log(updatedTasks);
+  // console.log("afterUpdate", tasks);
 };
 </script>
 
